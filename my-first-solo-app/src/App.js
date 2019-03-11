@@ -25,7 +25,8 @@ export default class App extends Component {
       <div className="App">
         <h1>My first react app!</h1>
         <p>Welcome</p>
-        <Ninjas ninjas={this.state.myNinjas} />
+        {/* <Ninjas ninjas={this.state.myNinjas} /> */}
+        <Ninjas myNinjas={this.state.myNinjas} />
       </div>
     );
   }
