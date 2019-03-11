@@ -3,13 +3,15 @@ import React, { Component } from "react";
 export default class Ninjas extends Component {
   render() {
     const { myNinjas } = this.props;
-
-    return (
-      <div className="Ninja">
-        <div>Name: {name}</div>
-        <div>Home: {home}</div>
-        <div>Occupation: {occupation}</div>
-      </div>
-    );
+    const ninjaList = myNinjas.map(ninja => {
+      return (
+        <div className="ninja" key={ninja.id}>
+          <div>Name: {ninja.name}</div>
+          <div>Home: {ninja.home} </div>
+          <div>Occupation: {ninja.occupation}</div>
+        </div>
+      );
+    });
+    return <div className="ninja-list">{ninjaList}</div>;
   }
 }
